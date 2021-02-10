@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<section id="sec">
+		<header>
+			<a href="#"><img src="images/logo.png" id="logo"></a>
+			<div class="toggleMenu" onclick="menuToggle()"></div>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+
+		<div class="content">
+			<div class="textBox">
+				<h2>That's What<br><span>I like</span></h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet debitis totam nostrum ea impedit obcaecati qui consequuntur aut quaerat autem similique ex eum, excepturi in necessitatibus dolorem, corporis. Minus atque, omnis iure minima, saepe, recusandae autem vero voluptas</p>
+				<a href="#">View All Products</a>
+			</div>
+			<div class="imgBox">
+				<img src="images/pepsi001.png" class="pepsi">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="images/pepsi001.png" onclick="imagenes('images/pepsi001.png'); cambiarFondo('#0062be')"></li>
+			<li><img src="images/pepsi002.png" onclick="imagenes('images/pepsi002.png'); cambiarFondo('#e60c2c')"></li>
+			<li><img src="images/pepsi003.png" onclick="imagenes('images/pepsi003.png'); cambiarFondo('#1e1e1e')"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="images/facebook.png"></a></li>
+			<li><a href="#"><img src="images/twitter.png"></a></li>
+			<li><a href="#"><img src="images/instagram.png"></a></li>
+		</ul>
+	</section>
+
+	<script type="text/javascript">
+		function imagenes(ruta){
+			document.querySelector('.pepsi').src = ruta
+		}
+
+		function cambiarFondo(color){
+			const sect = document.querySelector('.sec');
+
+			sec.style.background = color;
+		}
+
+		function menuToggle(){
+			const toggleMenu = document.querySelector('.toggleMenu');
+			const navigation = document.querySelector('.navigation');
+			
+			toggleMenu.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+	</script>	
+</body>
+</html>
